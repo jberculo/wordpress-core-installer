@@ -52,7 +52,8 @@ class WordPressCoreInstaller extends LibraryInstaller {
 			}
 		}
 		$extra = $package->getExtra();
-		if ( ! $installationDir && isset( $extra['wordpress-install-dir'] ) ) {
+		print_r($extra);
+		if ( $installationDir === false && isset( $extra['wordpress-install-dir'] ) ) {
 			$installationDir = $extra['wordpress-install-dir'];
 		} else {
             $installationDir = 'wordpress';
