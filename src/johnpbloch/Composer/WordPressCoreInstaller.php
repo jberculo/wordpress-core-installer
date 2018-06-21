@@ -44,7 +44,6 @@ class WordPressCoreInstaller extends LibraryInstaller {
 		$prettyName      = $package->getPrettyName();
 		if ( $this->composer->getPackage() ) {
 			$topExtra = $this->composer->getPackage()->getExtra();
-			print_r($topExtra);
 			if ( isset( $topExtra['wordpress-install-dir'] ) ) {
 				$installationDir = $topExtra['wordpress-install-dir'];
 				if ( is_array( $installationDir ) ) {
@@ -53,7 +52,6 @@ class WordPressCoreInstaller extends LibraryInstaller {
 			}
 		}
 		$extra = $package->getExtra();
-        print_r($extra);
 		if ( ! $installationDir && isset( $extra['wordpress-install-dir'] ) ) {
 			$installationDir = $extra['wordpress-install-dir'];
 		} else {
