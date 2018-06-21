@@ -57,6 +57,7 @@ class WordPressCoreInstaller extends LibraryInstaller {
 		} else {
             $installationDir = 'wordpress';
         }
+        echo $installationDir."<-------";
 		$vendorDir = $this->composer->getConfig()->get( 'vendor-dir', Config::RELATIVE_PATHS ) ?: 'vendor';
 		if (
 			in_array( $installationDir, $this->sensitiveDirectories ) ||
